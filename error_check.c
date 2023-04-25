@@ -6,7 +6,7 @@
 /*   By: jalbers <jalbers@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 12:36:00 by jalbers           #+#    #+#             */
-/*   Updated: 2023/04/21 14:22:04 by jalbers          ###   ########.fr       */
+/*   Updated: 2023/04/25 14:53:09 by jalbers          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,22 +37,22 @@ int	philo_eatcount_match(char **argv)
 	int philo_count;
 	int	i;
 
-	if (!argv[4])
+	if (!argv[5])
 		return (0);
 	philo_count = text_to_num(argv[1]);
-	i = 4;
+	i = 5;
 	while (argv[i])
 		i++;
-	if (philo_count != i - 4)
+	if (philo_count != i - 5)
 		return (1);
 	return (0);
 }
 
 int error_check(int argc, char **argv)
 {
-	if (argc < 4)
+	if (argc < 5)
 	{
-		write(1, "Error: Argument count needs to be at least 3\n", 45);
+		write(1, "Error: Argument count needs to be at least 4\n", 45);
 		exit(1);
 	}
 	else if (valid_numbers_check(argv) == 1)

@@ -6,7 +6,7 @@
 /*   By: jalbers <jalbers@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 15:57:00 by jalbers           #+#    #+#             */
-/*   Updated: 2023/04/20 16:40:28 by jalbers          ###   ########.fr       */
+/*   Updated: 2023/04/25 17:39:54 by jalbers          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ int input_data(t_data *data, int arg_num, int number)
 	else if (arg_num == 2)
 		data->time_to_die = number;
 	else if (arg_num == 3)
-		data->time_to_eat = number;
+		data->eat_time = number;
+	else if (arg_num == 4)
+		data->sleep_time = number;
 	return (0);
 }
 
@@ -44,7 +46,7 @@ int	read_inputs(t_data *data, char **argv)
 	int number;
 
 	i = 1;
-	while (i < 4)
+	while (i <= 4)
 	{
 		number = text_to_num(argv[i]);
 		input_data(data, i, number);

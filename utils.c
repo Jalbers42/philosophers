@@ -6,7 +6,7 @@
 /*   By: jalbers <jalbers@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 17:36:09 by jalbers           #+#    #+#             */
-/*   Updated: 2023/04/21 12:06:31 by jalbers          ###   ########.fr       */
+/*   Updated: 2023/04/25 15:09:39 by jalbers          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,33 @@ int	insert_num(int num, char *sentence, int i)
 		sentence[i] = digit;
 	}
 	return (i + 1);
+}
+
+int	len(int num)
+{
+	int	count;
+
+	count = 1;
+	while (num >= 10)
+	{
+		num /= 10;
+		count++;
+	}
+	return (count);
+}
+
+int	insert_string(char *target, int index, char *string)
+{
+	int	i;
+
+	i = 0;
+	while (string[i])
+	{
+		target[index] = string[i];
+		index++;
+		i++;
+	}
+	return (index);
 }
 
 // unsigned int	current_time()
