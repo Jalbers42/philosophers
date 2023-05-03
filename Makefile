@@ -6,7 +6,7 @@
 #    By: jalbers <jalbers@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/20 15:23:02 by jalbers           #+#    #+#              #
-#    Updated: 2023/04/25 18:07:38 by jalbers          ###   ########.fr        #
+#    Updated: 2023/04/26 11:34:29 by jalbers          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ MAIN := philo
 #	MANDATORY PART
 # =============================================================================
 
-SRC := philosophers.c read_input.c create_philos.c utils.c init.c state_change.c error_check.c eat_philos.c life_philos.c
+SRC := philosophers.c read_input.c create_philos_forks.c utils.c init_deinit.c state_msg_printf.c error_check.c take_release_forks.c life_philos.c
 
 # =============================================================================
 #	RULES

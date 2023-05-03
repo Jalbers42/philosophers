@@ -1,17 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   state_change.c                                     :+:      :+:    :+:   */
+/*   state_msg.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalbers <jalbers@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 10:43:16 by jalbers           #+#    #+#             */
-/*   Updated: 2023/04/25 18:05:51 by jalbers          ###   ########.fr       */
+/*   Updated: 2023/04/26 09:07:57 by jalbers          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philosophers.h"
 
+// These functions display the changes in state of the philosophers
+// Using
 int	philo_died(t_args *p_args, int counter)
 {
 	char	*sentence;

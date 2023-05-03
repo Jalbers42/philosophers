@@ -6,7 +6,7 @@
 /*   By: jalbers <jalbers@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 12:36:00 by jalbers           #+#    #+#             */
-/*   Updated: 2023/04/25 14:53:09 by jalbers          ###   ########.fr       */
+/*   Updated: 2023/04/26 11:53:50 by jalbers          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	valid_numbers_check(char **argv)
 
 int	philo_eatcount_match(char **argv)
 {
-	int philo_count;
+	int	philo_count;
 	int	i;
 
 	if (!argv[5])
@@ -48,7 +48,7 @@ int	philo_eatcount_match(char **argv)
 	return (0);
 }
 
-int error_check(int argc, char **argv)
+int	error_check(int argc, char **argv)
 {
 	if (argc < 5)
 	{
@@ -62,7 +62,7 @@ int error_check(int argc, char **argv)
 	}
 	else if (philo_eatcount_match(argv) == 1)
 	{
-		write(1, "Error: Number of Philosophers does not match list of eat_counts\n", 64);
+		write(1, "Error: Philosopher count does not match eat_counts\n", 64);
 		exit(1);
 	}
 	return (0);
